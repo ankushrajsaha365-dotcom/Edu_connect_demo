@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduConnect | Students & Teachers</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>EduConnect</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Learn. Teach. Earn.</h2>
+    <p>
+      A unified platform where students learn, teachers teach,
+      and qualified students earn through part-time teaching.
+    </p>
+  </section>
+
+  <section class="roles">
+    <div class="card">
+      <h3>Students</h3>
+      <ul>
+        <li>Attend virtual classes</li>
+        <li>Ask doubts</li>
+        <li>View grades</li>
+      </ul>
+      <button onclick="openDashboard('student')">Student Dashboard</button>
+    </div>
+
+    <div class="card">
+      <h3>Part-Time Teachers</h3>
+      <ul>
+        <li>Teach junior students</li>
+        <li>Doubt-solving sessions</li>
+        <li>Earn money</li>
+      </ul>
+      <button onclick="openDashboard('part-time')">Apply to Teach</button>
+    </div>
+
+    <div class="card">
+      <h3>Teachers</h3>
+      <ul>
+        <li>Manage classes</li>
+        <li>Create assessments</li>
+        <li>Track performance</li>
+      </ul>
+      <button onclick="openDashboard('teacher')">Teacher Dashboard</button>
+    </div>
+  </section>
+
+  <section class="dashboard">
+    <h2>Platform Modules</h2>
+    <div class="dashboard-grid">
+      <div class="card">📚 Classes</div>
+      <div class="card">📝 Assessments</div>
+      <div class="card">❓ Doubts</div>
+      <div class="card">📊 Grades</div>
+      <div class="card">💰 Earnings</div>
+      <div class="card">⚙️ Settings</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 EduConnect | Accessible Education Platform
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
