@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | EduConnect</title>
+</head>
+<body>
+
+  <h1 id="welcome"></h1>
+  <p id="role"></p>
+
+  <script>
+    const role = localStorage.getItem("userRole");
+    const email = localStorage.getItem("userEmail");
+
+    if (!role) {
+      window.location.href = "login.html";
+    }
+
+    document.getElementById("welcome").innerText =
+      `Welcome, ${email}`;
+    document.getElementById("role").innerText =
+      `Role: ${role}`;
+  </script>
+
+</body>
+</html>
