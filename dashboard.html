@@ -3,11 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>Dashboard | EduConnect</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1 id="welcome"></h1>
-  <p id="role"></p>
+  <header class="page-header">
+    <h1>EduConnect</h1>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="index.html">Home</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <div class="page-container">
+    <h1 id="welcome"></h1>
+    <p id="role"></p>
+
+    <section class="dashboard">
+      <h2>Platform Modules</h2>
+
+      <div class="dashboard-grid">
+        <div class="card module" onclick="goToModule('classes')">📚 My Classes</div>
+        <div class="card module" onclick="goToModule('assignments')">📝 Assignments</div>
+        <div class="card module" onclick="goToModule('doubts')">❓ Doubts</div>
+        <div class="card module" onclick="goToModule('grades')">📊 Grades</div>
+        <div class="card module" onclick="goToModule('earnings')">💰 Earnings</div>
+        <div class="card module" onclick="goToModule('settings')">⚙️ Settings</div>
+      </div>
+    </section>
+  </div>
 
   <script>
     const role = localStorage.getItem("userRole");
@@ -21,7 +46,21 @@
       `Welcome, ${email}`;
     document.getElementById("role").innerText =
       `Role: ${role}`;
-  </script>
 
+    function goToModule(module) {
+      window.location.href = module + ".html";
+
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "login.html";
+    }
+  </script>
+  <script src="js/script.js"></script>
+  <script>
+    protectPage();
+  </script>
 </body>
+
+
 </html>

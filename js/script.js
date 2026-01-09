@@ -1,18 +1,33 @@
+// Redirect user based on selected role
 function openDashboard(role) {
+
+  // Store role selection
+  localStorage.setItem("userRole", role);
+
   switch (role) {
     case "student":
-      alert("Redirecting to Student Dashboard");
+      window.location.href = "dashboard.html";
       break;
 
     case "part-time":
-      alert("Redirecting to Part-Time Teacher Application");
+      window.location.href = "apply-teacher.html";
       break;
 
     case "teacher":
-      alert("Redirecting to Teacher Dashboard");
+      window.location.href = "dashboard.html";
       break;
 
     default:
-      alert("Invalid role");
+      alert("Invalid role selected");
+  }
+}
+
+/* --------------------------
+   OPTIONAL: protect dashboard
+--------------------------- */
+function protectPage() {
+  const role = localStorage.getItem("userRole");
+  if (!role) {
+    window.location.href = "login.html";
   }
 }

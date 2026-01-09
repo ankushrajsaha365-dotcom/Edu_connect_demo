@@ -17,6 +17,8 @@ body {
   color: #111827;
 }
 
+/* ================= HEADER & NAV ================= */
+
 header {
   background: var(--primary);
   color: white;
@@ -33,6 +35,12 @@ nav a {
   font-weight: bold;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================= HERO SECTION ================= */
+
 .hero {
   text-align: center;
   padding: 3rem 2rem;
@@ -41,6 +49,8 @@ nav a {
 .hero h2 {
   font-size: 2.2rem;
 }
+
+/* ================= ROLE CARDS ================= */
 
 .roles {
   display: grid;
@@ -77,6 +87,8 @@ nav a {
   opacity: 0.9;
 }
 
+/* ================= DASHBOARD ================= */
+
 .dashboard {
   padding: 2rem;
 }
@@ -87,13 +99,66 @@ nav a {
   gap: 1rem;
 }
 
+/* ================= MODULE CARDS ================= */
+
+.module {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.module:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ================= PAGE LAYOUT ================= */
+
+.page-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* ================= LISTS ================= */
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.6rem;
+}
+
+/* ================= FOOTER ================= */
+
 footer {
   text-align: center;
   padding: 1rem;
   background: #e5e7eb;
+  margin-top: 2rem;
 }
 
-/* Accessibility */
+/* ================= LINKS ================= */
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================= ACCESSIBILITY ================= */
+
 button:focus,
 a:focus {
   outline: 3px solid #facc15;
