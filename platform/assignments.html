@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignments | EduConnect</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <h1>EduConnect</h1>
+    <nav>
+      <a href="../dashboard.html">Dashboard</a>
+      <a href="../index.html">Home</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-container">
+    <h1>📝 Assignments & Tests</h1>
+    <p>View, submit, and review assignments and assessments.</p>
+
+    <div class="card">
+      <h3>No assignments yet</h3>
+      <p>This section will show your assignments once they are available.</p>
+    </div>
+
+    <a class="back-link" href="../dashboard.html">⬅ Back to Dashboard</a>
+  </main>
+
+  <!-- Scripts -->
+  <script src="../js/script.js"></script>
+  <script>
+    protectPage();
+    protectRole(["student", "teacher"]);
+  </script>
+
+</body>
+</html>
